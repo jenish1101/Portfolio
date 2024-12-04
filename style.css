@@ -1,0 +1,449 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+
+
+/* 1. Navbar Section */
+.navbar {
+    /* background-color: #FBE8E3; */
+    background-color: #F8F7EC;
+}
+
+
+
+/* 2. Hero Section  */
+
+/*  hero background image */
+.bgimage {
+    height: 100vh;
+    background: url('images/OtherPictures/hero2.png');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* add a dark overlay */
+.bgimage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* dark overlay */
+    z-index: 1;
+}
+
+/* text css above hero image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero_title {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.hero_desc {
+    font-size: 2rem;
+    animation: slideInFromRight 1s ease-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* responsive typography */
+@media (max-width: 768px) {
+    .hero_title {
+        font-size: 3rem;
+    }
+
+    .hero_desc {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+/* 3. About Section */
+
+
+.my-img {
+    height: 350px;
+    width: 350px;
+    border-radius: 1000px;
+}
+
+.imageAboutPage {
+    width: 100%;
+}
+
+/* About section styles */
+#about {
+    background-color: white;
+    padding: 60px 0;
+}
+
+#about .container {
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h1 {
+    color: #007bff;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+
+#about p.lead {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+#about ul {
+    padding: 0;
+    list-style: none;
+}
+
+#about ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#about i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+#about ul.list-unstyled {
+    padding: 0;
+    margin: 0;
+}
+
+#about ul.list-unstyled li {
+    margin-bottom: 10px;
+}
+
+#about .my-img {
+    max-width: 80%;
+    height: auto;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .my-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    #about .my-img {
+        margin-bottom: 20px;
+    }
+
+    #about .lead {
+        text-align: center;
+    }
+}
+
+
+
+/* 4. Skills Section */
+
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card:hover .servicesIcon {
+    color: #008000;
+}
+
+.servicesText:hover {
+    border: 1px solid #008000;
+}
+
+
+
+
+/* 5. Portfolio section */
+
+
+.portfolio-card-img {
+    border: 2px solid black;
+}
+
+
+.card {
+    height: 500px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+#contact {
+    margin-bottom: 50px;
+}
+
+.servicesText:hover {
+    transform: scale(1.03);
+}
+
+.skill-row {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    height: auto;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-body h4 {
+    margin-top: 20px;
+    color: #007bff;
+}
+
+.card-body img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/*  6. Contact section  */
+
+
+#contact {
+    margin-bottom: 50px;
+}
+
+/* Services text hover */
+.servicesText:hover {
+    transform: scale(1.03);
+}
+
+/* Skill row styles */
+.skill-row {
+    display: flex;
+}
+
+textarea {
+    resize: none;
+  }
+
+
+
+
+
+
+/*  7. Footer section  */
+
+
+/* social media icons styling */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-linkedin:hover{
+    color: #008000;
+}
+
+.fab {
+    color: #000000;
+}
+
+
+/* footer styling */
+#footer {
+    background-color: #808080;
+    text-align: center;
+}
+
+/* spacing on all sections */
+#about,
+#skills,
+#portfolio,
+#contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+
+#contact {
+    padding-bottom: 4rem;
+}
+
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer styling */
+#footer {
+    margin-bottom: 0.3rem;
+    background-color: #333; /* Darker background color */
+    color: #fff; /* Light text color */
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+/* Social icons styling */
+.social-icons {
+    font-size: 36px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease-out;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Lift icons on hover */
+}
+
+.social-icons a i {
+    color: #fff; /* White icon color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-icons {
+        font-size: 28px; /* Adjust size for smaller screens */
+    }
+}
+
+/* Animations for icons */
+@keyframes icon-hover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation on hover */
+.social-icons a:hover i {
+    animation: icon-hover 0.4s ease forwards;
+}
+
+/* Additional spacing for sections */
+#about,
+#skills,
+#portfolio,
+#contact {
+    margin-top: 0rem;
+    padding-top: 4rem;
+}
+
+#contact {
+    padding-bottom: 4rem;
+}
+
+

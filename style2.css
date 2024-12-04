@@ -1,0 +1,292 @@
+General Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    font-size: 16px;
+    background: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: linear-gradient(45deg, #ff6347, #ff4500);
+    padding: 1rem 0;
+    transition: background 0.3s;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #fff;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #ffd700;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Hero Section */
+  .bgimage {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero-text {
+    color: #fff;
+  }
+  
+  .hero_title {
+    font-size: 3rem;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .hero_desc {
+    font-size: 1.5rem;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* About Section */
+  #about {
+    padding: 5rem 0;
+    background: #fff;
+  }
+  
+  #about .my-img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ff6347;
+    animation: pulse 2s infinite;
+  }
+  
+  #about .lead {
+    font-size: 1.25rem;
+    color: #555;
+  }
+  
+  #about ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #about ul li {
+    margin-bottom: 0.5rem;
+    color: #777;
+  }
+  
+  #about p {
+    margin-top: 1rem;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Skills Section */
+  #skills {
+    padding: 5rem 0;
+    background: #f4f4f9;
+  }
+  
+  #skills h3 {
+    margin-top: 3rem;
+  }
+  
+  #skills .card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: bounceIn 1s ease-in-out;
+  }
+  
+  #skills .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #skills .card-title {
+    margin-top: 1rem;
+  }
+  
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Portfolio Section */
+  #portfolio {
+    padding: 5rem 0;
+    background: #fff;
+  }
+  
+  #portfolio .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  #portfolio .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #portfolio .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  #portfolio .card-img-top:hover {
+    transform: scale(1.1);
+  }
+  
+  #portfolio .card-footer {
+    background: none;
+    border-top: none;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 5rem 0;
+    background: #f4f4f9;
+  }
+  
+  #contact form input,
+  #contact form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  #contact form input:focus,
+  #contact form textarea:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+  }
+  
+  #contact .btn {
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.3s;
+  }
+  
+  #contact .btn:hover {
+    background: #e5533d;
+  }
+  
+  /* Footer Section */
+  #footer {
+    padding: 2rem 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #footer .social-icons a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  #footer .social-icons a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero_title {
+      font-size: 2.5rem;
+    }
+  
+    .hero_desc {
+      font-size: 1.25rem;
+    }
+  
+    #about .col-lg-8 {
+      text-align: center;
+    }
+  
+    #skills .card,
+    #portfolio .card {
+      margin-bottom: 2rem;
+    }
+  }
+  
